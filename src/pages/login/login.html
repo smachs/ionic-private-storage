@@ -1,0 +1,48 @@
+<!-- Nav Bar -->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Authentication</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!-- Main Content -->
+<ion-content padding>
+  <!-- Explore -->
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img width="44px" height="44px" src="assets/branding/logo-rgb.svg">
+      </ion-avatar>
+      <h2>Ionic Private Storage</h2>
+      <p>A little information for you</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>Wait a minute. Wait a minute, Doc. If you need help with recovering your login please use the methods below...</p>
+    </ion-card-content>
+  </ion-card>
+  <!-- Auth Form --> 
+  <ion-item>
+    <ion-label floating>Your e-mail</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Your password</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    
+  </ion-item>
+  <ion-item>
+    <button ion-button color="dark" block (click)="login(user)">Log in to my storage</button>
+    <!-- Float the icon right -->
+    <button ion-button color="danger" block>Reset my password</button>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="footer">
+    <div (click)="goToSignup()">
+      <span>Don't have an account?
+        <strong>Sign up here</strong>.</span>
+    </div>
+  </ion-toolbar>
+</ion-footer>
